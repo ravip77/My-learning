@@ -1,0 +1,25 @@
+# i want to create a dockerfile to install nginx and copy a file from the host to the container
+FROM nginx:latest
+# Copy the file from the host to the container
+COPY ./nginx.conf /etc/nginx/nginx.conf
+# Expose port 80
+EXPOSE 80
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
+# Build the image
+# docker build -t my-nginx .
+# Run the container
+# docker run -d -p 80:80 my-nginx
+# Check the logs
+# docker logs <container_id>
+# Check the running containers
+# docker ps
+# Check the nginx status
+# docker exec -it <container_id> /bin/bash
+# Check the nginx status
+# nginx -t
+# Check the nginx status
+# curl http://localhost
+# Check the nginx status
+# curl -I http://localhost
+# Check the nginx status
